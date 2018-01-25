@@ -300,8 +300,8 @@
    `(eshell-ls-archive ((,class (:foreground ,jazz-red-1 :weight bold))))
    `(eshell-ls-backup ((,class (:inherit font-lock-comment))))
    `(eshell-ls-clutter ((,class (:inherit font-lock-comment))))
-   `(eshell-ls-directory ((,class (:foreground ,jazz-blue+1 :weight bold))))
-   `(eshell-ls-executable ((,class (:foreground ,jazz-red+1 :weight bold))))
+   `(eshell-ls-directory ((,class (:foreground ,jazz-blue+1 :background ,jazz-bg :weight bold))))
+   `(eshell-ls-executable ((,class (:foreground ,jazz-red+1 :background ,jazz-bg :weight bold))))
    `(eshell-ls-unreadable ((,class (:foreground ,jazz-fg))))
    `(eshell-ls-missing ((,class (:inherit font-lock-warning))))
    `(eshell-ls-product ((,class (:inherit font-lock-doc))))
@@ -447,6 +447,7 @@
    `(helm-selection-line ((,class (:background ,jazz-bg+1))))
    `(helm-visible-mark ((,class (:foreground ,jazz-bg :background ,jazz-yellow-2))))
    `(helm-candidate-number ((,class (:foreground ,jazz-green+4 :background ,jazz-bg-1))))
+   `(helm-ff-directory ((,class (:foreground ,jazz-green :background ,jazz-bg :weight bold))))
 
    ;; hl-line-mode
    `(hl-line-face ((,class (:background ,jazz-bg-1))))
