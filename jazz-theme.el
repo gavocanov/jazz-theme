@@ -4,6 +4,7 @@
 
 ;; Author: Roman Parykin <donderom@ymail.com>
 ;; URL: https://github.com/donderom/jazz-theme
+;; Package-Version: 20170411.711
 ;; Version: 1.0
 
 ;; Based on zenburn-theme.el
@@ -47,12 +48,57 @@
 ;;; Code:
 (deftheme jazz "The Jazz color theme")
 
+
 (let ((class '((class color) (min-colors 89)))
+      (jazz-fg       "#a8a8a8")
+      (jazz-fg-1     "#a8a8a8")
+      (jazz-fg+1     "#303030")
+
+      ;; (jazz-bg-1     "#101010")
+      ;; (jazz-bg-05    "#151515")
+      ;; (jazz-bg       "#151515")
+      ;; (jazz-bg+1     "#202020")
+      ;; (jazz-bg+2     "#505050")
+      ;; (jazz-bg+3     "#606060")
+
+      ;; (jazz-red+1    "#c30771")
+      ;; (jazz-red      "#e32791")
+      ;; (jazz-red-1    "#e32791")
+      ;; (jazz-red-2    "#e32791")
+      ;; (jazz-red-3    "#e32791")
+      ;; (jazz-red-4    "#e32791")
+
+      ;; (jazz-orange   "#D75F5F")
+
+      ;; (jazz-yellow+1 "#A89C14")
+      ;; (jazz-yellow   "#A89C14")
+      ;; (jazz-yellow-1 "#A89C14")
+      ;; (jazz-yellow-2 "#A89C14")
+
+      ;; (jazz-green-1  "#10A778")
+      ;; (jazz-green    "#10A778")
+      ;; (jazz-green+1  "#5FD7A7")
+      ;; (jazz-green+2  "#5FD7A7")
+      ;; (jazz-green+3  "#5FD7A7")
+      ;; (jazz-green+4  "#5FD7A7")
+
+      ;; (jazz-cyan     "#20A5BA")
+
+      ;; (jazz-blue+1   "#20BBFC")
+      ;; (jazz-blue     "#008EC4")
+      ;; (jazz-blue-1   "#008EC4")
+      ;; (jazz-blue-2   "#008EC4")
+      ;; (jazz-blue-3   "#008EC4")
+      ;; (jazz-blue-4   "#008EC4")
+      ;; (jazz-blue-5   "#008EC4")
+
+      ;; (jazz-magenta  "#a790d5"))
+
       ;; Jazz palette
       ;; colors with +x are lighter, colors with -x are darker
-      (jazz-fg       "#c6a57b")
-      (jazz-fg-1     "#c6a57b")
-      (jazz-fg+1     "#303030")
+      ;; (jazz-fg       "#c6a57b")
+      ;; (jazz-fg-1     "#c6a57b")
+      ;; (jazz-fg+1     "#303030")
 
       (jazz-bg-1     "#101010")
       (jazz-bg-05    "#151515")
@@ -157,7 +203,8 @@
    `(mode-line-vc-mode ((,class (:foreground ,jazz-magenta))))
    `(mode-line-minor-mode-face ((,class (:foreground ,jazz-bg+2 :height 96))))
 
-   `(region ((,class (:background ,jazz-fg :foreground ,jazz-blue))))
+   ;;; `(region ((,class (:background ,jazz-fg :foreground ,jazz-blue))))
+   `(region ((,class (:background ,jazz-bg+2 :foreground ,jazz-orange))))
    `(secondary-selection ((,class (:background ,jazz-bg+2))))
    `(trailing-whitespace ((,class (:background ,jazz-red))))
    `(vertical-border ((,class (:foreground ,jazz-fg))))
@@ -673,11 +720,11 @@
    ;; ensime
    `(ensime-errline-highlight ((,class (:background ,jazz-red :foreground ,jazz-fg))))
    `(ensime-warnline ((,class (:background ,jazz-bg+1))))
-   
+
    ;; coffee-mode
    `(coffee-mode-function-param ((,class (:foreground ,jazz-blue+1))))
    `(coffee-mode-class-name ((,class (:foreground ,jazz-blue))))
-   
+
    ;; which-func-mode
    `(which-func ((,class (:foreground ,jazz-green+4)))))
 
