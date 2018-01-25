@@ -187,13 +187,13 @@
    `(mode-line
      ((,class (:foreground ,jazz-fg
                            :background ,jazz-bg+1
-                           :box (:line-width 5 :color ,jazz-bg+1)))))
+                           :box (:line-width 2 :color ,jazz-bg+1)))))
    `(mode-line-buffer-id ((,class (:foreground ,jazz-yellow :weight bold))))
    `(mode-line-highlight ((,class (:inverse-video t))))
    `(mode-line-inactive
      ((,class (:inherit mode-line :foreground ,jazz-green-1
                         :background ,jazz-bg-1
-                        :box (:line-width 5 :color ,jazz-bg-1)))))
+                        :box (:line-width 1 :color ,jazz-bg-1)))))
    `(mode-line-folder-face ((,class (:foreground ,jazz-bg+2))))
    `(mode-line-modified-face ((,class (:foreground ,jazz-red))))
    `(mode-line-ro-modified-face ((,class (:foreground ,jazz-blue))))
