@@ -177,7 +177,7 @@
    `(grep-match-face ((,class (:foreground ,jazz-orange :weight bold))))
    `(match ((,class (:background ,jazz-bg-1 :foreground ,jazz-orange :weight bold))))
 
-   ;; w3c
+   ;; w3m
    '(w3m-image-anchor ((t nil)))
 
    ;; faces used by isearch
