@@ -177,6 +177,9 @@
    `(grep-match-face ((,class (:foreground ,jazz-orange :weight bold))))
    `(match ((,class (:background ,jazz-bg-1 :foreground ,jazz-orange :weight bold))))
 
+   ;; w3c
+   '(w3m-image-anchor ((t nil)))
+
    ;; faces used by isearch
    `(isearch ((,class (:foreground ,jazz-yellow :background ,jazz-bg-1))))
    `(isearch-fail ((,class (:foreground ,jazz-fg :background ,jazz-red-4))))
@@ -187,7 +190,7 @@
    `(mode-line
      ((,class (:foreground ,jazz-fg
                            :background ,jazz-bg+1
-                           :box (:line-width 2 :color ,jazz-bg+1)))))
+                           :box (:line-width 1 :color ,jazz-bg+1)))))
    `(mode-line-buffer-id ((,class (:foreground ,jazz-yellow :weight bold))))
    `(mode-line-highlight ((,class (:inverse-video t))))
    `(mode-line-inactive
