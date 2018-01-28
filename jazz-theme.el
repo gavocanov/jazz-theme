@@ -451,6 +451,8 @@
    `(helm-visible-mark ((,class (:foreground ,jazz-bg :background ,jazz-yellow-2))))
    `(helm-candidate-number ((,class (:foreground ,jazz-green+4 :background ,jazz-bg-1))))
    `(helm-ff-directory ((,class (:foreground ,jazz-green :background ,jazz-bg :weight bold))))
+   `(helm-ff-prefix ((,class (:foreground ,jazz-green :background ,jazz-bg :weight bold))))
+   `(helm-ff-dotted-directory ((,class (:foreground ,jazz-bg+3 :background ,jazz-bg :weight bold))))
 
    ;; hl-line-mode
    `(hl-line-face ((,class (:background ,jazz-bg-1))))
