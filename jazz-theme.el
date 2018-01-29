@@ -488,8 +488,8 @@
    `(linum ((,class (:foreground ,jazz-bg+2 :background ,jazz-bg-1))))
 
    ;; native line numbers
-   `(line-number ((,class (:foreground ,jazz-bg+2 :background ,jazz-bg-1))))
-   `(line-number-current-line ((,class (:foreground ,jazz-red :background ,jazz-bg-1))))
+   `(line-number ((,class (:foreground ,jazz-bg+2 :background ,jazz-bg))))
+   `(line-number-current-line ((,class (:foreground ,jazz-yellow+1 :background ,jazz-bg+1 :weight bold))))
 
    ;; magit
    `(magit-section-title ((,class (:foreground ,jazz-yellow :weight bold :box nil :background ,jazz-bg))))
