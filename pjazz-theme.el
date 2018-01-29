@@ -1,12 +1,13 @@
-;;; jazz-theme.el --- A warm color theme for Emacs 24+.
+;;; pjazz-theme.el --- A (less) warm color theme for Emacs 24+.
 
-;; Copyright (C) 2012-2014 Roman Parykin, Bozhidar Batsov
+;; Copyright (C) 2012-2014 Roman Parykin, Bozhidar Batsov, Paolo Gavocanov
 
-;; Author: Roman Parykin <donderom@ymail.com>
-;; URL: https://github.com/donderom/jazz-theme
-;; Package-Version: 20170411.711
-;; Version: 1.0
+;; Author: Paolo Gavocanov <gavocanov@gmail.com>
+;; Original author: Roman Parykin <donderom@ymail.com>
+;; URL: https://github.com/gavocanov/jazz-theme
+;; Version: 0.1
 
+;; Based on jazz-theme.el
 ;; Based on zenburn-theme.el
 ;; Author: Bozhidar Batsov <bozhidar.batsov@gmail.com>
 ;; URL: http://github.com/bbatsov/zenburn-emacs
@@ -32,73 +33,28 @@
 ;;
 ;; or
 ;;
-;; (load-file "path/to/jazz-theme.el")
-;; (load-theme 'jazz t)
+;; (load-file "path/to/pjazz-theme.el")
+;; (load-theme 'pjazz t)
 ;;
 ;; Don't forget that the theme requires Emacs 24+.
 ;;
-;; The more information on the project page at https://github.com/donderom/jazz-theme
+;; The more information on the project page at https://github.com/gavocanov/jazz-theme
 ;;
 ;;; Credits
 ;;
+;; Roman Parykin (original jazz-theme)
 ;; Jani Nurminen (zenburn theme for vim)
 ;; Bozhidar Batsov (zenburn theme port for Emacs),
 ;; Christian Brassat <crshd@mail.com> (jazz theme initial colors inspiration)
 ;;
 ;;; Code:
-(deftheme jazz "The Jazz color theme")
+(deftheme pjazz "The pjazz color theme")
 
 
 (let ((class '((class color) (min-colors 89)))
       (jazz-fg       "#a8a8a8")
       (jazz-fg-1     "#a8a8a8")
       (jazz-fg+1     "#303030")
-
-      ;; (jazz-bg-1     "#101010")
-      ;; (jazz-bg-05    "#151515")
-      ;; (jazz-bg       "#151515")
-      ;; (jazz-bg+1     "#202020")
-      ;; (jazz-bg+2     "#505050")
-      ;; (jazz-bg+3     "#606060")
-
-      ;; (jazz-red+1    "#c30771")
-      ;; (jazz-red      "#e32791")
-      ;; (jazz-red-1    "#e32791")
-      ;; (jazz-red-2    "#e32791")
-      ;; (jazz-red-3    "#e32791")
-      ;; (jazz-red-4    "#e32791")
-
-      ;; (jazz-orange   "#D75F5F")
-
-      ;; (jazz-yellow+1 "#A89C14")
-      ;; (jazz-yellow   "#A89C14")
-      ;; (jazz-yellow-1 "#A89C14")
-      ;; (jazz-yellow-2 "#A89C14")
-
-      ;; (jazz-green-1  "#10A778")
-      ;; (jazz-green    "#10A778")
-      ;; (jazz-green+1  "#5FD7A7")
-      ;; (jazz-green+2  "#5FD7A7")
-      ;; (jazz-green+3  "#5FD7A7")
-      ;; (jazz-green+4  "#5FD7A7")
-
-      ;; (jazz-cyan     "#20A5BA")
-
-      ;; (jazz-blue+1   "#20BBFC")
-      ;; (jazz-blue     "#008EC4")
-      ;; (jazz-blue-1   "#008EC4")
-      ;; (jazz-blue-2   "#008EC4")
-      ;; (jazz-blue-3   "#008EC4")
-      ;; (jazz-blue-4   "#008EC4")
-      ;; (jazz-blue-5   "#008EC4")
-
-      ;; (jazz-magenta  "#a790d5"))
-
-      ;; Jazz palette
-      ;; colors with +x are lighter, colors with -x are darker
-      ;; (jazz-fg       "#c6a57b")
-      ;; (jazz-fg-1     "#c6a57b")
-      ;; (jazz-fg+1     "#303030")
 
       (jazz-bg-1     "#101010")
       (jazz-bg-05    "#151515")
@@ -140,7 +96,7 @@
 
       (jazz-magenta  "#7f355e"))
   (custom-theme-set-faces
-   'jazz
+   'pjazz
    '(button ((t (:underline t))))
    `(link ((,class (:foreground ,jazz-yellow :underline t :weight bold))))
    `(link-visited ((,class (:foreground ,jazz-yellow-2 :underline t :weight normal))))
@@ -740,7 +696,7 @@
 
   ;;; custom theme variables
   (custom-theme-set-variables
-   'jazz
+   'pjazz
    `(ansi-color-names-vector [,jazz-bg ,jazz-red ,jazz-green ,jazz-yellow
                                        ,jazz-blue ,jazz-magenta ,jazz-cyan ,jazz-fg])
 
@@ -752,6 +708,5 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'jazz)
-
-;;; jazz-theme.el ends here.
+(provide-theme 'pjazz)
+;;; pjazz-theme.el ends here
