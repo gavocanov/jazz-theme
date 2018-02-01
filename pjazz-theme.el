@@ -97,7 +97,7 @@
        (jazz-magenta  "#7f355e"))
   (custom-theme-set-faces
     'pjazz
-    '(button ((t (:underline t))))
+    `(button ((t (:underline t))))
     `(link ((,class (:foreground ,jazz-yellow :underline t :weight bold))))
     `(link-visited ((,class (:foreground ,jazz-yellow-2 :underline t :weight normal))))
 
@@ -134,7 +134,8 @@
     `(match ((,class (:background ,jazz-bg-1 :foreground ,jazz-orange :weight bold))))
 
     ;; w3m
-    '(w3m-image-anchor ((t nil)))
+    `(w3m-image-anchor ((t nil)))
+    `(w3m-anchor ((,class (:foreground ,jazz-blue))))
 
     ;; faces used by isearch
     `(isearch ((,class (:foreground ,jazz-yellow :background ,jazz-bg-1))))
