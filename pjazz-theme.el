@@ -405,6 +405,10 @@
     `(lui-button-face ((,class (:foreground ,jazz-blue))))
     `(slack-message-output-header ((,class (:background ,jazz-bg+1 :foreground ,jazz-yellow+1))))
     `(slack-message-output-reaction ((,class (:foreground ,jazz-bg+3))))
+    `(slack-message-output-text ((,class (:foreground ,jazz-bg+3))))
+    `(slack-attachment-header ((,class (:background ,jazz-bg+1 :foreground ,jazz-green))))
+    ;; `(slack-attachment-footer ((,class (:background ,jazz-bg+1 :foreground ,jazz-bg+2))))
+    ;; `(slack-attachment-pad ((,class (:background ,jazz-bg+1 :foreground ,jazz-bg+2 :weight normal))))
 
     ;; jabber-mode
     `(jabber-roster-user-away ((,class (:foreground ,jazz-green+2))))
