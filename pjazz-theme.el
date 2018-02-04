@@ -171,7 +171,7 @@
 
    ;;; font lock
     `(font-lock-builtin-face ((,class (:foreground ,jazz-blue))))
-    `(font-lock-comment-face ((,class (:foreground ,jazz-bg+2))))
+    `(font-lock-comment-face ((,class (:italic t :foreground ,jazz-bg+2))))
     `(font-lock-comment-delimiter-face ((,class (:foreground ,jazz-bg+2))))
     `(font-lock-constant-face ((,class (:foreground ,jazz-magenta))))
     `(font-lock-doc-face ((,class (:foreground ,jazz-green+1))))
