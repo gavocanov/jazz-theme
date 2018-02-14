@@ -151,8 +151,8 @@
     `(isearch-lazy-highlight-face ((,class (:foreground ,jazz-yellow+1 :background ,jazz-magenta))))
     ;; `(lazy-highlight ((,class (:inverse-video t))))
 
-    `(menu ((,class (:foreground ,jazz-fg :background ,jazz-bg))))
-    `(minibuffer-prompt ((,class (:foreground ,jazz-blue))))
+    `(menu ((,class (:foreground ,jazz-bg+3 :background ,jazz-bg))))
+    `(minibuffer-prompt ((,class (:foreground ,jazz-bg+2))))
     `(mode-line
        ((,class (:foreground ,jazz-bg+2
                   :background ,jazz-bg+1
@@ -176,7 +176,7 @@
     `(region ((,class (:background ,jazz-bg+2 :foreground ,jazz-orange))))
     `(secondary-selection ((,class (:background ,jazz-bg+2))))
     `(trailing-whitespace ((,class (:background ,jazz-red))))
-    `(vertical-border ((,class (:foreground ,jazz-fg))))
+    `(vertical-border ((,class (:foreground ,jazz-bg+1))))
 
    ;;; font lock
     `(font-lock-builtin-face ((,class (:foreground ,jazz-blue))))
