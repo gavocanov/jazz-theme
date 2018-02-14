@@ -52,9 +52,9 @@
 
 
 (let ((class '((class color) (min-colors 89)))
-       (jazz-fg       "#a8a8a8")
-       (jazz-fg-1     "#a8a8a8")
-       (jazz-fg+1     "#303030")
+       (jazz-fg       "#787878")
+       (jazz-fg+1     "#989898")
+       (jazz-fg-1     "#686868")
 
        (jazz-bg-1     "#101010")
        (jazz-bg-05    "#151515")
