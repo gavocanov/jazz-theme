@@ -154,13 +154,13 @@
     `(menu ((,class (:foreground ,jazz-fg :background ,jazz-bg))))
     `(minibuffer-prompt ((,class (:foreground ,jazz-blue))))
     `(mode-line
-       ((,class (:foreground ,jazz-fg
+       ((,class (:foreground ,jazz-bg+2
                   :background ,jazz-bg+1
                   :box (:line-width 1 :color ,jazz-bg+1)))))
     `(mode-line-buffer-id ((,class (:foreground ,jazz-yellow :weight bold))))
     `(mode-line-highlight ((,class (:inverse-video t))))
     `(mode-line-inactive
-       ((,class (:inherit mode-line :foreground ,jazz-green-1
+       ((,class (:inherit mode-line :foreground ,jazz-bg-1
                   :background ,jazz-bg-1
                   :box (:line-width 1 :color ,jazz-bg-1)))))
     `(mode-line-folder-face ((,class (:foreground ,jazz-bg+2))))
