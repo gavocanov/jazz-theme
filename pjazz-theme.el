@@ -137,10 +137,19 @@
     `(w3m-image-anchor ((t nil)))
     `(w3m-anchor ((,class (:foreground ,jazz-blue))))
 
+    ;; ivy
+    `(ivy-current-match ((,class (:background ,jazz-bg+1))))
+    `(ivy-minibuffer-match-face-1 ((,class (:foreground ,jazz-yellow+1 :background ,jazz-magenta))))
+    `(ivy-minibuffer-match-face-2 ((,class (:foreground ,jazz-yellow+1 :background ,jazz-magenta))))
+    `(ivy-minibuffer-match-face-3 ((,class (:foreground ,jazz-yellow+1 :background ,jazz-magenta))))
+    `(ivy-minibuffer-match-face-4 ((,class (:foreground ,jazz-yellow+1 :background ,jazz-magenta))))
+
     ;; faces used by isearch
-    `(isearch ((,class (:foreground ,jazz-yellow :background ,jazz-bg-1))))
+    `(isearch ((,class (:foreground ,jazz-yellow+1 :background ,jazz-magenta))))
     `(isearch-fail ((,class (:foreground ,jazz-fg :background ,jazz-red-4))))
-    `(lazy-highlight ((,class (:foreground ,jazz-yellow :background ,jazz-bg+2))))
+    `(lazy-highlight ((,class (:foreground ,jazz-yellow+1 :background ,jazz-magenta))))
+    `(isearch-lazy-highlight-face ((,class (:foreground ,jazz-yellow+1 :background ,jazz-magenta))))
+    ;; `(lazy-highlight ((,class (:inverse-video t))))
 
     `(menu ((,class (:foreground ,jazz-fg :background ,jazz-bg))))
     `(minibuffer-prompt ((,class (:foreground ,jazz-blue))))
