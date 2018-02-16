@@ -153,24 +153,51 @@
 
     `(menu ((,class (:foreground ,jazz-bg+3 :background ,jazz-bg))))
     `(minibuffer-prompt ((,class (:foreground ,jazz-bg+2))))
+
+    ;; modeline
     `(mode-line
-       ((,class (:foreground ,jazz-bg+2
-                  :background ,jazz-bg+1
-                  :box (:line-width 1 :color ,jazz-bg+1)))))
-    `(mode-line-buffer-id ((,class (:foreground ,jazz-yellow :weight bold))))
-    `(mode-line-highlight ((,class (:inverse-video t))))
+       ((,class (:box (:line-width 1 :color ,jazz-bg+1) :foreground ,jazz-bg+2 :background ,jazz-bg+1))))
     `(mode-line-inactive
-       ((,class (:inherit mode-line :foreground ,jazz-bg-1
-                  :background ,jazz-bg-1
-                  :box (:line-width 1 :color ,jazz-bg-1)))))
+       ((,class (:box (:line-width 1 :color ,jazz-bg+1) :foreground ,jazz-bg+1 :background ,jazz-bg+1))))
+
+    `(mode-line-buffer-id ((,class (:foreground ,jazz-yellow))))
+    `(mode-line-highlight ((,class (:inverse-video t))))
     `(mode-line-folder-face ((,class (:foreground ,jazz-bg+2))))
     `(mode-line-modified-face ((,class (:foreground ,jazz-red))))
     `(mode-line-ro-modified-face ((,class (:foreground ,jazz-blue))))
     `(mode-line-buffer-name ((,class (:foreground ,jazz-yellow))))
     `(mode-line-mode-name ((,class (:foreground ,jazz-blue))))
-    `(mode-line-mode-string ((,class (:foreground ,jazz-bg+3))))
+    `(mode-line-mode-string ((,class (:foreground ,jazz-blue))))
     `(mode-line-vc-mode ((,class (:foreground ,jazz-magenta))))
-    `(mode-line-minor-mode-face ((,class (:foreground ,jazz-bg+2 :height 96))))
+    `(mode-line-minor-mode-face ((,class (:foreground ,jazz-blue))))
+
+    ;; smart modeline
+    `(sml/global              ((,class (:foreground ,jazz-fg :weight normal))))
+    `(sml/client              ((,class (:foreground ,jazz-fg :weight normal))))
+    `(sml/not-modified        ((,class (:foreground ,jazz-green :weight normal))))
+    `(sml/mule-info           ((,class (:foreground ,jazz-bg+2 :weight normal))))
+    `(sml/modes               ((,class (:foreground ,jazz-magenta :weight normal))))
+    `(sml/minor-modes         ((,class (:foreground ,jazz-cyan :weight normal))))
+    `(sml/filename            ((,class (:foreground ,jazz-yellow :weight normal))))
+    `(sml/prefix              ((,class (:foreground ,jazz-blue :weight normal))))
+    `(sml/read-only           ((,class (:foreground ,jazz-red :weight normal))))
+    `(sml/modified            ((,class (:foreground ,jazz-red :weight normal))))
+    `(sml/outside-modified    ((,class (:foreground ,jazz-red :weight normal))))
+    `(sml/line-number         ((,class (:foreground ,jazz-yellow :weight normal))))
+    `(sml/remote              ((,class (:foreground ,jazz-red :weight normal))))
+    `(sml/name-filling        ((,class (:foreground ,jazz-yellow :weight normal))))
+    `(sml/position-percentage ((,class (:foreground ,jazz-yellow :weight normal))))
+    `(sml/col-number          ((,class (:foreground ,jazz-yellow :weight normal))))
+    `(sml/numbers-separator   ((,class (:foreground ,jazz-bg+2 :weight normal))))
+    `(sml/sudo                ((,class (:foreground ,jazz-red :weight normal))))
+    `(sml/git                 ((,class (:foreground ,jazz-green :weight normal))))
+    `(sml/folder              ((,class (:foreground ,jazz-green :weight normal))))
+    `(sml/process             ((,class (:foreground ,jazz-red :weight normal))))
+    `(sml/vc                  ((,class (:foreground ,jazz-green :weight normal))))
+    `(sml/vc-edited           ((,class (:foreground ,jazz-red :weight normal))))
+    `(sml/charging            ((,class (:foreground ,jazz-green :weight normal))))
+    `(sml/discharging         ((,class (:foreground ,jazz-red :weight normal))))
+    `(sml/time                ((,class (:foreground ,jazz-bg+2 :weight normal))))
 
    ;;; `(region ((,class (:background ,jazz-fg :foreground ,jazz-blue))))
     `(region ((,class (:background ,jazz-bg+2 :foreground ,jazz-orange))))
@@ -376,15 +403,14 @@
 
     ;; helm
     `(helm-header
-       ((,class (:foreground ,jazz-green
+       ((,class ( :foreground ,jazz-green
                   :background ,jazz-bg
                   :underline nil
                   :box nil))))
     `(helm-source-header
-       ((,class (:foreground ,jazz-yellow
-                  :background ,jazz-bg-1
-                  :weight bold
-                  :box (:line-width -1 :style released-button)))))
+       ((,class ( :foreground ,jazz-yellow
+                  :background ,jazz-bg
+                  :box nil))))
     `(helm-selection ((,class (:background ,jazz-bg+1))))
     `(helm-selection-line ((,class (:background ,jazz-bg+1))))
     `(helm-visible-mark ((,class (:foreground ,jazz-red+1 :background ,jazz-yellow-2))))
@@ -698,7 +724,7 @@
 ;;;###autoload
 (when load-file-name
   (add-to-list 'custom-theme-load-path
-               (file-name-as-directory (file-name-directory load-file-name))))
+    (file-name-as-directory (file-name-directory load-file-name))))
 
 (provide-theme 'pjazz)
 ;;; pjazz-theme.el ends here
