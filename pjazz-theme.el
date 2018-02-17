@@ -50,15 +50,15 @@
 ;;; Code:
 (deftheme pjazz "The pjazz color theme")
 
-
 (let ((class '((class color) (min-colors 89)))
        (jazz-fg       "#787878")
        (jazz-fg+1     "#989898")
        (jazz-fg-1     "#686868")
 
-       (jazz-bg-1     "#101010")
-       (jazz-bg-05    "#151515")
-       (jazz-bg       "#151515")
+       (jazz-bg-1     "#060606")
+       (jazz-bg-05    "#080808")
+       (jazz-bg       "#101010")
+       (jazz-bg+      "#181818")
        (jazz-bg+1     "#202020")
        (jazz-bg+2     "#505050")
        (jazz-bg+3     "#606060")
@@ -102,14 +102,13 @@
     `(link-visited ((,class (:foreground ,jazz-yellow-2 :underline t :weight normal))))
 
    ;;; basic coloring
-    `(default ((,class (:foreground ,jazz-fg :background ,jazz-bg))))
-    `(cursor ((,class (:foreground ,jazz-bg-05 :background ,jazz-orange))))
+    `(default           ((,class (:foreground ,jazz-fg :background ,jazz-bg))))
+    `(cursor            ((,class (:foreground ,jazz-bg+1 :background ,jazz-magenta))))
     `(escape-glyph-face ((,class (:foreground ,jazz-red))))
-    `(fringe ((,class (:foreground ,jazz-fg+1 :background ,jazz-bg))))
-    `(header-line ((,class (:foreground ,jazz-yellow
-                             :background ,jazz-bg-1
-                             :box (:line-width -1 :color ,jazz-bg :style released-button)))))
-    `(highlight ((,class (:background ,jazz-bg+1))))
+    `(fringe            ((,class (:foreground ,jazz-fg :background ,jazz-bg))))
+    `(highlight         ((,class (:background ,jazz-bg+))))
+    `(header-line       ((,class (:foreground ,jazz-yellow :background ,jazz-bg-1
+                                   :box (:line-width -1 :color ,jazz-bg :style released-button)))))
 
    ;;; compilation
     `(compilation-column-face ((,class (:foreground ,jazz-yellow))))
@@ -165,36 +164,36 @@
     `(mode-line-minor-mode-face   ((,class (:foreground ,jazz-blue))))
 
     ;; smart modeline
-    `(sml/global              ((,class (:foreground ,jazz-fg :weight normal))))
-    `(sml/client              ((,class (:foreground ,jazz-fg :weight normal))))
-    `(sml/not-modified        ((,class (:foreground ,jazz-green :weight normal))))
-    `(sml/mule-info           ((,class (:foreground ,jazz-bg+2 :weight normal))))
+    `(sml/global              ((,class (:foreground ,jazz-fg      :weight thin))))
+    `(sml/client              ((,class (:foreground ,jazz-fg      :weight thin))))
+    `(sml/not-modified        ((,class (:foreground ,jazz-green   :weight thin))))
+    `(sml/mule-info           ((,class (:foreground ,jazz-bg+2    :weight thin))))
     `(sml/modes               ((,class (:foreground ,jazz-green+4 :weight normal))))
-    `(sml/minor-modes         ((,class (:foreground ,jazz-fg :weight normal))))
-    `(sml/filename            ((,class (:foreground ,jazz-yellow :weight normal))))
-    `(sml/prefix              ((,class (:foreground ,jazz-blue :weight normal))))
-    `(sml/read-only           ((,class (:foreground ,jazz-red :weight normal))))
-    `(sml/modified            ((,class (:foreground ,jazz-red :weight normal))))
-    `(sml/outside-modified    ((,class (:foreground ,jazz-red :weight normal))))
-    `(sml/line-number         ((,class (:foreground ,jazz-yellow :weight normal))))
-    `(sml/remote              ((,class (:foreground ,jazz-red :weight normal))))
-    `(sml/name-filling        ((,class (:foreground ,jazz-yellow :weight normal))))
-    `(sml/position-percentage ((,class (:foreground ,jazz-yellow :weight normal))))
-    `(sml/col-number          ((,class (:foreground ,jazz-yellow :weight normal))))
-    `(sml/numbers-separator   ((,class (:foreground ,jazz-bg+2 :weight normal))))
-    `(sml/sudo                ((,class (:foreground ,jazz-red :weight normal))))
-    `(sml/git                 ((,class (:foreground ,jazz-green :weight normal))))
-    `(sml/folder              ((,class (:foreground ,jazz-green :weight normal))))
-    `(sml/process             ((,class (:foreground ,jazz-red :weight normal))))
-    `(sml/vc                  ((,class (:foreground ,jazz-green :weight normal))))
-    `(sml/vc-edited           ((,class (:foreground ,jazz-red :weight normal))))
-    `(sml/charging            ((,class (:foreground ,jazz-green :weight normal))))
-    `(sml/discharging         ((,class (:foreground ,jazz-red :weight normal))))
-    `(sml/time                ((,class (:foreground ,jazz-bg+2 :weight normal))))
+    `(sml/minor-modes         ((,class (:foreground ,jazz-magenta :weight thin))))
+    `(sml/filename            ((,class (:foreground ,jazz-yellow  :weight normal))))
+    `(sml/prefix              ((,class (:foreground ,jazz-blue    :weight thin))))
+    `(sml/read-only           ((,class (:foreground ,jazz-red     :weight thin))))
+    `(sml/modified            ((,class (:foreground ,jazz-red     :weight thin))))
+    `(sml/outside-modified    ((,class (:foreground ,jazz-red     :weight thin))))
+    `(sml/line-number         ((,class (:foreground ,jazz-yellow  :weight normal))))
+    `(sml/remote              ((,class (:foreground ,jazz-red     :weight thin))))
+    `(sml/name-filling        ((,class (:foreground ,jazz-yellow  :weight thin))))
+    `(sml/position-percentage ((,class (:foreground ,jazz-yellow  :weight thin))))
+    `(sml/col-number          ((,class (:foreground ,jazz-yellow  :weight normal))))
+    `(sml/numbers-separator   ((,class (:foreground ,jazz-bg+2    :weight thin))))
+    `(sml/sudo                ((,class (:foreground ,jazz-red     :weight thin))))
+    `(sml/git                 ((,class (:foreground ,jazz-green   :weight normal))))
+    `(sml/folder              ((,class (:foreground ,jazz-green   :weight thin))))
+    `(sml/process             ((,class (:foreground ,jazz-red     :weight thin))))
+    `(sml/vc                  ((,class (:foreground ,jazz-green   :weight thin))))
+    `(sml/vc-edited           ((,class (:foreground ,jazz-red     :weight thin))))
+    `(sml/charging            ((,class (:foreground ,jazz-green   :weight thin))))
+    `(sml/discharging         ((,class (:foreground ,jazz-red     :weight thin))))
+    `(sml/time                ((,class (:foreground ,jazz-bg+2    :weight thin))))
 
     ;; helm
-    `(helm-selection            ((,class (:background ,jazz-bg+1))))
-    `(helm-selection-line       ((,class (:background ,jazz-bg+1))))
+    `(helm-selection            ((,class (:foreground ,jazz-magenta :background ,jazz-bg+1))))
+    `(helm-selection-line       ((,class (:foreground ,jazz-magenta :background ,jazz-bg+1))))
     `(helm-match                ((,class (:foreground ,jazz-magenta :background ,jazz-bg))))
     `(helm-header               ((,class (:foreground ,jazz-green   :background ,jazz-bg :underline nil :box nil))))
     `(helm-source-header        ((,class (:foreground ,jazz-yellow  :background ,jazz-bg :box nil))))
@@ -219,16 +218,16 @@
 
    ;;; font lock
     `(font-lock-builtin-face            ((,class (:foreground ,jazz-blue))))
-    `(font-lock-comment-face            ((,class (:foreground ,jazz-bg+2 :italic t))))
-    `(font-lock-comment-delimiter-face  ((,class (:foreground ,jazz-bg+2))))
+    `(font-lock-comment-face            ((,class (:foreground ,jazz-bg+2 :italic t :weight thin))))
+    `(font-lock-comment-delimiter-face  ((,class (:foreground ,jazz-bg+2 :italic t :weight thin))))
     `(font-lock-constant-face           ((,class (:foreground ,jazz-magenta))))
-    `(font-lock-doc-face                ((,class (:foreground ,jazz-bg+2 :italic t))))
+    `(font-lock-doc-face                ((,class (:foreground ,jazz-bg+2 :italic t :weight thin))))
     `(font-lock-doc-string-face         ((,class (:foreground ,jazz-blue+1))))
     `(font-lock-function-name-face      ((,class (:foreground ,jazz-blue))))
     `(font-lock-keyword-face            ((,class (:foreground ,jazz-yellow))))
     `(font-lock-negation-char-face      ((,class (:foreground ,jazz-fg))))
     `(font-lock-preprocessor-face       ((,class (:foreground ,jazz-blue))))
-    `(font-lock-string-face             ((,class (:foreground ,jazz-bg+2))))
+    `(font-lock-string-face             ((,class (:foreground ,jazz-green :weight thin))))
     `(font-lock-type-face               ((,class (:foreground ,jazz-yellow))))
     `(font-lock-variable-name-face      ((,class (:foreground ,jazz-orange))))
     `(font-lock-warning-face            ((,class (:foreground ,jazz-yellow-1 :weight normal))))
@@ -277,16 +276,22 @@
     `(cheatsheet-key-face ((,class (:foreground ,jazz-yellow))))
 
     ;; company
+    `(company-preview                   ((,class (:background ,jazz-bg+ :foreground ,jazz-fg))))
     `(company-preview-common            ((,class (:inherit company-preview))))
-    `(company-preview-search            ((,class (:inherit company-preview :background ,jazz-blue+1))))
-    `(company-tooltip                   ((,class (:background ,jazz-bg+1 :foreground ,jazz-fg))))
-    `(company-tooltip-common            ((,class (:foreground ,jazz-magenta :underline nil))))
-    `(company-tooltip-common-selection  ((,class (:background ,jazz-blue-4 :foreground ,jazz-fg :underline nil))))
-    `(company-tooltip-selection         ((,class (:background ,jazz-blue-4 :foreground ,jazz-fg))))
-    `(company-preview                   ((,class (:background ,jazz-blue :foreground ,jazz-fg))))
-    `(company-scrollbar-fg              ((,class (:background ,jazz-bg+2))))
+    `(company-preview-search            ((,class (:inherit company-preview :background ,jazz-blue-4))))
+
+    `(company-tooltip-common                ((,class (:background ,jazz-bg+  :foreground ,jazz-magenta))))
+    `(company-tooltip                       ((,class (:background ,jazz-bg+  :foreground ,jazz-fg))))
+    `(company-tooltip-common-selection      ((,class (:background ,jazz-bg+1 :foreground ,jazz-magenta))))
+    `(company-tooltip-selection             ((,class (:background ,jazz-bg+1 :foreground ,jazz-fg))))
+    `(company-tooltip-annotation            ((,class (:background ,jazz-bg+  :foreground ,jazz-cyan))))
+    `(company-tooltip-annotation-selection  ((,class (:background ,jazz-bg+1 :foreground ,jazz-cyan))))
+
+    `(company-scrollbar-fg              ((,class (:background ,jazz-magenta))))
     `(company-scrollbar-bg              ((,class (:background ,jazz-bg-1))))
-    `(company-tooltip-annotation        ((,class (:background nil :foreground ,jazz-yellow))))
+
+    `(company-echo                      ((,class (:background ,jazz-bg-1))))
+    `(company-echo-common               ((,class (:background ,jazz-bg-1))))
 
     ;; diff
     `(diff-added ((,class (:foreground ,jazz-green+4))))
@@ -456,8 +461,8 @@
     `(linum ((,class (:foreground ,jazz-bg+2 :background ,jazz-bg-1))))
 
     ;; native line numbers
-    `(line-number ((,class (:foreground ,jazz-bg+2 :background ,jazz-bg))))
-    `(line-number-current-line ((,class (:foreground ,jazz-yellow+1 :background ,jazz-bg+1 :weight bold))))
+    `(line-number               ((,class (:foreground ,jazz-bg   :background ,jazz-bg   :weight thin))))
+    `(line-number-current-line  ((,class (:foreground ,jazz-bg+2 :background ,jazz-bg+1 :weight normal))))
 
     ;; magit
     `(magit-section-title ((,class (:foreground ,jazz-yellow :weight bold :box nil :background ,jazz-bg))))
