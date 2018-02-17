@@ -103,7 +103,7 @@
 
    ;;; basic coloring
     `(default ((,class (:foreground ,jazz-fg :background ,jazz-bg))))
-    `(cursor ((,class (:foreground ,jazz-fg :background ,jazz-fg))))
+    `(cursor ((,class (:foreground ,jazz-bg-05 :background ,jazz-orange))))
     `(escape-glyph-face ((,class (:foreground ,jazz-red))))
     `(fringe ((,class (:foreground ,jazz-fg+1 :background ,jazz-bg))))
     `(header-line ((,class (:foreground ,jazz-yellow
@@ -133,51 +133,44 @@
     `(grep-match-face ((,class (:foreground ,jazz-orange :weight bold))))
     `(match ((,class (:background ,jazz-bg-1 :foreground ,jazz-orange :weight bold))))
 
-    ;; w3m
-    `(w3m-image-anchor ((t nil)))
-    `(w3m-anchor ((,class (:foreground ,jazz-blue))))
-
-    ;; ivy
-    `(ivy-current-match ((,class (:background ,jazz-bg+1))))
-    `(ivy-minibuffer-match-face-1 ((,class (:foreground ,jazz-yellow+1 :background ,jazz-magenta))))
-    `(ivy-minibuffer-match-face-2 ((,class (:foreground ,jazz-yellow+1 :background ,jazz-magenta))))
-    `(ivy-minibuffer-match-face-3 ((,class (:foreground ,jazz-yellow+1 :background ,jazz-magenta))))
-    `(ivy-minibuffer-match-face-4 ((,class (:foreground ,jazz-yellow+1 :background ,jazz-magenta))))
-
-    ;; faces used by isearch
-    `(isearch ((,class (:foreground ,jazz-yellow+1 :background ,jazz-magenta))))
-    `(isearch-fail ((,class (:foreground ,jazz-fg :background ,jazz-red-4))))
-    `(lazy-highlight ((,class (:foreground ,jazz-yellow+1 :background ,jazz-magenta))))
-    `(isearch-lazy-highlight-face ((,class (:foreground ,jazz-yellow+1 :background ,jazz-magenta))))
-    ;; `(lazy-highlight ((,class (:inverse-video t))))
-
     `(menu ((,class (:foreground ,jazz-bg+3 :background ,jazz-bg))))
     `(minibuffer-prompt ((,class (:foreground ,jazz-bg+2))))
 
-    ;; modeline
-    `(mode-line
-       ((,class (:box (:line-width 1 :color ,jazz-bg+1) :foreground ,jazz-bg+2 :background ,jazz-bg+1))))
-    `(mode-line-inactive
-       ((,class (:box (:line-width 1 :color ,jazz-bg+1) :foreground ,jazz-bg+1 :background ,jazz-bg+1))))
+    ;; faces used by isearch
+    `(isearch                     ((,class (:foreground ,jazz-magenta :background ,jazz-bg))))
+    `(isearch-fail                ((,class (:foreground ,jazz-fg      :background ,jazz-red-4))))
+    `(lazy-highlight              ((,class (:foreground ,jazz-magenta :background ,jazz-bg))))
+    `(isearch-lazy-highlight-face ((,class (:foreground ,jazz-magenta :background ,jazz-bg))))
 
-    `(mode-line-buffer-id ((,class (:foreground ,jazz-yellow))))
-    `(mode-line-highlight ((,class (:inverse-video t))))
-    `(mode-line-folder-face ((,class (:foreground ,jazz-bg+2))))
-    `(mode-line-modified-face ((,class (:foreground ,jazz-red))))
-    `(mode-line-ro-modified-face ((,class (:foreground ,jazz-blue))))
-    `(mode-line-buffer-name ((,class (:foreground ,jazz-yellow))))
-    `(mode-line-mode-name ((,class (:foreground ,jazz-blue))))
-    `(mode-line-mode-string ((,class (:foreground ,jazz-blue))))
-    `(mode-line-vc-mode ((,class (:foreground ,jazz-magenta))))
-    `(mode-line-minor-mode-face ((,class (:foreground ,jazz-blue))))
+    ;; ivy
+    `(ivy-current-match           ((,class (:background ,jazz-bg+1))))
+    `(ivy-minibuffer-match-face-1 ((,class (:foreground ,jazz-magenta :background ,jazz-bg))))
+    `(ivy-minibuffer-match-face-2 ((,class (:foreground ,jazz-magenta :background ,jazz-bg))))
+    `(ivy-minibuffer-match-face-3 ((,class (:foreground ,jazz-magenta :background ,jazz-bg))))
+    `(ivy-minibuffer-match-face-4 ((,class (:foreground ,jazz-magenta :background ,jazz-bg))))
+
+    ;; modeline
+    `(mode-line           ((,class (:box (:line-width 1 :color ,jazz-bg+1) :foreground ,jazz-bg+2 :background ,jazz-bg+1))))
+    `(mode-line-inactive  ((,class (:box (:line-width 1 :color ,jazz-bg+1) :foreground ,jazz-bg+1 :background ,jazz-bg+1))))
+
+    `(mode-line-highlight         ((,class (:inverse-video t))))
+    `(mode-line-buffer-id         ((,class (:foreground ,jazz-yellow))))
+    `(mode-line-folder-face       ((,class (:foreground ,jazz-bg+2))))
+    `(mode-line-modified-face     ((,class (:foreground ,jazz-red))))
+    `(mode-line-ro-modified-face  ((,class (:foreground ,jazz-blue))))
+    `(mode-line-buffer-name       ((,class (:foreground ,jazz-yellow))))
+    `(mode-line-mode-name         ((,class (:foreground ,jazz-blue))))
+    `(mode-line-mode-string       ((,class (:foreground ,jazz-blue))))
+    `(mode-line-vc-mode           ((,class (:foreground ,jazz-magenta))))
+    `(mode-line-minor-mode-face   ((,class (:foreground ,jazz-blue))))
 
     ;; smart modeline
     `(sml/global              ((,class (:foreground ,jazz-fg :weight normal))))
     `(sml/client              ((,class (:foreground ,jazz-fg :weight normal))))
     `(sml/not-modified        ((,class (:foreground ,jazz-green :weight normal))))
     `(sml/mule-info           ((,class (:foreground ,jazz-bg+2 :weight normal))))
-    `(sml/modes               ((,class (:foreground ,jazz-magenta :weight normal))))
-    `(sml/minor-modes         ((,class (:foreground ,jazz-cyan :weight normal))))
+    `(sml/modes               ((,class (:foreground ,jazz-green+4 :weight normal))))
+    `(sml/minor-modes         ((,class (:foreground ,jazz-fg :weight normal))))
     `(sml/filename            ((,class (:foreground ,jazz-yellow :weight normal))))
     `(sml/prefix              ((,class (:foreground ,jazz-blue :weight normal))))
     `(sml/read-only           ((,class (:foreground ,jazz-red :weight normal))))
@@ -199,29 +192,48 @@
     `(sml/discharging         ((,class (:foreground ,jazz-red :weight normal))))
     `(sml/time                ((,class (:foreground ,jazz-bg+2 :weight normal))))
 
+    ;; helm
+    `(helm-selection            ((,class (:background ,jazz-bg+1))))
+    `(helm-selection-line       ((,class (:background ,jazz-bg+1))))
+    `(helm-match                ((,class (:foreground ,jazz-magenta :background ,jazz-bg))))
+    `(helm-header               ((,class (:foreground ,jazz-green   :background ,jazz-bg :underline nil :box nil))))
+    `(helm-source-header        ((,class (:foreground ,jazz-yellow  :background ,jazz-bg :box nil))))
+    `(helm-visible-mark         ((,class (:foreground ,jazz-red+1   :background ,jazz-bg+1))))
+    `(helm-candidate-number     ((,class (:foreground ,jazz-magenta :background ,jazz-bg-1))))
+    `(helm-ff-directory         ((,class (:foreground ,jazz-green   :background ,jazz-bg :weight normal))))
+    `(helm-ff-prefix            ((,class (:foreground ,jazz-green   :background ,jazz-bg :weight normal))))
+    `(helm-ff-dotted-directory  ((,class (:foreground ,jazz-bg+2    :background ,jazz-bg :weight normal))))
+    `(helm-ff-file              ((,class (:foreground ,jazz-fg      :background ,jazz-bg :weight normal))))
+    `(helm-buffer-file          ((,class (:foreground ,jazz-green   :background ,jazz-bg :weight normal))))
+    `(helm-buffer-file-name     ((,class (:foreground ,jazz-yellow  :background ,jazz-bg :weight normal))))
+
+    ;; w3m
+    `(w3m-image-anchor ((t nil)))
+    `(w3m-anchor ((,class (:foreground ,jazz-blue))))
+
    ;;; `(region ((,class (:background ,jazz-fg :foreground ,jazz-blue))))
-    `(region ((,class (:background ,jazz-bg+2 :foreground ,jazz-orange))))
+    `(region              ((,class (:background ,jazz-bg+1 :foreground ,jazz-orange))))
     `(secondary-selection ((,class (:background ,jazz-bg+2))))
     `(trailing-whitespace ((,class (:background ,jazz-red))))
-    `(vertical-border ((,class (:foreground ,jazz-bg+1))))
+    `(vertical-border     ((,class (:foreground ,jazz-bg+1))))
 
    ;;; font lock
-    `(font-lock-builtin-face ((,class (:foreground ,jazz-blue))))
-    `(font-lock-comment-face ((,class (:italic t :foreground ,jazz-bg+2))))
-    `(font-lock-comment-delimiter-face ((,class (:foreground ,jazz-bg+2))))
-    `(font-lock-constant-face ((,class (:foreground ,jazz-magenta))))
-    `(font-lock-doc-face ((,class (:foreground ,jazz-green+1))))
-    `(font-lock-doc-string-face ((,class (:foreground ,jazz-blue+1))))
-    `(font-lock-function-name-face ((,class (:foreground ,jazz-blue))))
-    `(font-lock-keyword-face ((,class (:foreground ,jazz-yellow))))
-    `(font-lock-negation-char-face ((,class (:foreground ,jazz-fg))))
-    `(font-lock-preprocessor-face ((,class (:foreground ,jazz-blue))))
-    `(font-lock-string-face ((,class (:foreground ,jazz-red))))
-    `(font-lock-type-face ((,class (:foreground ,jazz-yellow))))
-    `(font-lock-variable-name-face ((,class (:foreground ,jazz-orange))))
-    `(font-lock-warning-face ((,class (:foreground ,jazz-yellow-1 :weight bold :underline t))))
+    `(font-lock-builtin-face            ((,class (:foreground ,jazz-blue))))
+    `(font-lock-comment-face            ((,class (:foreground ,jazz-bg+2 :italic t))))
+    `(font-lock-comment-delimiter-face  ((,class (:foreground ,jazz-bg+2))))
+    `(font-lock-constant-face           ((,class (:foreground ,jazz-magenta))))
+    `(font-lock-doc-face                ((,class (:foreground ,jazz-bg+2 :italic t))))
+    `(font-lock-doc-string-face         ((,class (:foreground ,jazz-blue+1))))
+    `(font-lock-function-name-face      ((,class (:foreground ,jazz-blue))))
+    `(font-lock-keyword-face            ((,class (:foreground ,jazz-yellow))))
+    `(font-lock-negation-char-face      ((,class (:foreground ,jazz-fg))))
+    `(font-lock-preprocessor-face       ((,class (:foreground ,jazz-blue))))
+    `(font-lock-string-face             ((,class (:foreground ,jazz-bg+2))))
+    `(font-lock-type-face               ((,class (:foreground ,jazz-yellow))))
+    `(font-lock-variable-name-face      ((,class (:foreground ,jazz-orange))))
+    `(font-lock-warning-face            ((,class (:foreground ,jazz-yellow-1 :weight normal))))
 
-    `(c-annotation-face ((,class (:inherit font-lock-constant-face))))
+    `(c-annotation-face                 ((,class (:inherit font-lock-constant-face))))
 
    ;;; external
 
@@ -265,16 +277,16 @@
     `(cheatsheet-key-face ((,class (:foreground ,jazz-yellow))))
 
     ;; company
-    `(company-tooltip ((,class (:background ,jazz-bg+3 :foreground ,jazz-bg))))
-    `(company-tooltip-common ((,class (:foreground ,jazz-bg :underline t))))
-    `(company-tooltip-common-selection ((,class (:background ,jazz-blue-4 :foreground ,jazz-fg :underline t))))
-    `(company-tooltip-selection ((,class (:background ,jazz-blue-4 :foreground ,jazz-fg))))
-    `(company-preview ((,class (:background ,jazz-blue :foreground ,jazz-fg))))
-    `(company-preview-common ((,class (:inherit company-preview))))
-    `(company-preview-search ((,class (:inherit company-preview :background ,jazz-blue+1))))
-    `(company-scrollbar-fg ((,class (:background ,jazz-bg+1))))
-    `(company-scrollbar-bg ((,class (:background ,jazz-bg+2))))
-    `(company-tooltip-annotation ((,class (:background nil :foreground ,jazz-yellow))))
+    `(company-preview-common            ((,class (:inherit company-preview))))
+    `(company-preview-search            ((,class (:inherit company-preview :background ,jazz-blue+1))))
+    `(company-tooltip                   ((,class (:background ,jazz-bg+1 :foreground ,jazz-fg))))
+    `(company-tooltip-common            ((,class (:foreground ,jazz-magenta :underline nil))))
+    `(company-tooltip-common-selection  ((,class (:background ,jazz-blue-4 :foreground ,jazz-fg :underline nil))))
+    `(company-tooltip-selection         ((,class (:background ,jazz-blue-4 :foreground ,jazz-fg))))
+    `(company-preview                   ((,class (:background ,jazz-blue :foreground ,jazz-fg))))
+    `(company-scrollbar-fg              ((,class (:background ,jazz-bg+2))))
+    `(company-scrollbar-bg              ((,class (:background ,jazz-bg-1))))
+    `(company-tooltip-annotation        ((,class (:background nil :foreground ,jazz-yellow))))
 
     ;; diff
     `(diff-added ((,class (:foreground ,jazz-green+4))))
@@ -401,24 +413,6 @@
     `(gnus-signature ((,class (:foreground ,jazz-yellow))))
     `(gnus-x ((,class (:background ,jazz-fg :foreground ,jazz-bg))))
 
-    ;; helm
-    `(helm-header
-       ((,class ( :foreground ,jazz-green
-                  :background ,jazz-bg
-                  :underline nil
-                  :box nil))))
-    `(helm-source-header
-       ((,class ( :foreground ,jazz-yellow
-                  :background ,jazz-bg
-                  :box nil))))
-    `(helm-selection ((,class (:background ,jazz-bg+1))))
-    `(helm-selection-line ((,class (:background ,jazz-bg+1))))
-    `(helm-visible-mark ((,class (:foreground ,jazz-red+1 :background ,jazz-yellow-2))))
-    `(helm-candidate-number ((,class (:foreground ,jazz-green+4 :background ,jazz-bg-1))))
-    `(helm-ff-directory ((,class (:foreground ,jazz-green :background ,jazz-bg :weight bold))))
-    `(helm-ff-prefix ((,class (:foreground ,jazz-green :background ,jazz-bg :weight bold))))
-    `(helm-ff-dotted-directory ((,class (:foreground ,jazz-bg+3 :background ,jazz-bg :weight bold))))
-
     ;; hl-line-mode
     `(hl-line-face ((,class (:background ,jazz-bg-1))))
 
@@ -525,7 +519,7 @@
     `(minimap-semantic-variable-face ((,class (:inherit (font-lock-variable-name-face minimap-font-face) :background "gray10"))))
 
     ;; mic-paren
-    `(paren-face-match ((,class (:foreground ,jazz-cyan :background ,jazz-bg :weight bold :underline t))))
+    `(paren-face-match    ((,class (:foreground ,jazz-cyan :background ,jazz-bg :weight bold :underline t))))
     `(paren-face-mismatch ((,class (:foreground ,jazz-bg :background ,jazz-magenta :weight bold))))
     `(paren-face-no-match ((,class (:foreground ,jazz-bg :background ,jazz-red :weight bold))))
 
@@ -636,8 +630,8 @@
     `(sbt:warning ((,class (:foreground ,jazz-orange))))
 
     ;; show-paren
-    `(show-paren-mismatch ((,class (:foreground ,jazz-red-3 :background ,jazz-bg :weight bold))))
-    `(show-paren-match ((,class (:foreground ,jazz-fg+1 :background ,jazz-bg+2))))
+    `(show-paren-mismatch ((,class (:foreground ,jazz-bg-05 :background ,jazz-red :weight normal))))
+    `(show-paren-match    ((,class (:foreground ,jazz-bg-05 :background ,jazz-orange))))
 
     ;; SLIME
     `(slime-repl-inputed-output-face ((,class (:foreground ,jazz-red))))
