@@ -462,8 +462,19 @@
     `(linum ((,class (:foreground ,jazz-bg+2 :background ,jazz-bg-1))))
 
     ;; native line numbers
-    `(line-number               ((,class (:foreground ,jazz-bg   :background ,jazz-bg   :weight thin))))
-    `(line-number-current-line  ((,class (:foreground ,jazz-bg+2 :background ,jazz-bg+1 :weight normal))))
+    `(line-number               ((,class (:foreground ,jazz-bg+2  :background ,jazz-bg  :weight thin))))
+    `(line-number-current-line  ((,class (:foreground ,jazz-green :background ,jazz-bg+ :weight normal))))
+
+    ;; diff-hl
+    `(diff-hl-insert ((,class (:foreground ,jazz-bg+2  :background ,jazz-bg  :weight thin))))
+    `(diff-hl-change ((,class (:foreground ,jazz-bg+2  :background ,jazz-bg  :weight thin))))
+    `(diff-hl-delete ((,class (:foreground ,jazz-bg+2  :background ,jazz-bg  :weight thin))))
+
+    `(diff-hl-margin-insert  ((,class (:foreground ,jazz-bg+2  :background ,jazz-bg  :weight thin))))
+    `(diff-hl-margin-change  ((,class (:foreground ,jazz-bg+2  :background ,jazz-bg  :weight thin))))
+    `(diff-hl-margin-delete  ((,class (:foreground ,jazz-bg+2  :background ,jazz-bg  :weight thin))))
+    `(diff-hl-margin-ignored ((,class (:foreground ,jazz-bg+2  :background ,jazz-bg  :weight thin))))
+    `(diff-hl-margin-unknown ((,class (:foreground ,jazz-bg+2  :background ,jazz-bg  :weight thin))))
 
     ;; magit
     `(magit-section-title ((,class (:foreground ,jazz-yellow :weight bold :box nil :background ,jazz-bg))))
