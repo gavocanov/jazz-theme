@@ -110,6 +110,7 @@
     `(highlight         ((,class (:background ,jazz-bg+))))
     `(header-line       ((,class (:foreground ,jazz-yellow :background ,jazz-bg-1
                                    :box (:line-width -1 :color ,jazz-bg :style released-button)))))
+    ;; `(header-line           ((,class (:box (:line-width 1 :color ,jazz-bg+1) :foreground ,jazz-bg+2 :background ,jazz-bg+1))))
 
    ;;; compilation
     `(compilation-column-face ((,class (:foreground ,jazz-yellow))))
@@ -648,7 +649,7 @@
 
     ;; show-paren
     `(show-paren-mismatch ((,class (:foreground ,jazz-bg-05 :background ,jazz-red :weight normal))))
-    `(show-paren-match    ((,class (:foreground ,jazz-bg-05 :background ,jazz-orange))))
+    `(show-paren-match    ((,class (:foreground ,jazz-bg+ :background ,jazz-magenta))))
 
     ;; SLIME
     `(slime-repl-inputed-output-face ((,class (:foreground ,jazz-red))))
