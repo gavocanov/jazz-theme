@@ -138,10 +138,10 @@
     `(minibuffer-prompt ((,class (:foreground ,jazz-bg+2))))
 
     ;; faces used by isearch
-    `(isearch                     ((,class (:foreground ,jazz-magenta :background ,jazz-bg))))
-    `(isearch-fail                ((,class (:foreground ,jazz-fg      :background ,jazz-red-4))))
-    `(lazy-highlight              ((,class (:foreground ,jazz-magenta :background ,jazz-bg))))
-    `(isearch-lazy-highlight-face ((,class (:foreground ,jazz-magenta :background ,jazz-bg))))
+    `(isearch-fail                ((,class (:foreground ,jazz-fg    :background ,jazz-red-4))))
+    `(isearch                     ((,class (:foreground ,jazz-red-4 :background ,jazz-bg :weight bold :italic t))))
+    `(lazy-highlight              ((,class (:foreground ,jazz-red-4 :background ,jazz-bg :weight bold :italic t))))
+    `(isearch-lazy-highlight-face ((,class (:foreground ,jazz-red-4 :background ,jazz-bg :weight bold :italic t))))
 
     ;; ivy
     `(ivy-current-match           ((,class (:background ,jazz-bg+1))))
