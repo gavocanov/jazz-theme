@@ -103,14 +103,17 @@
     `(link-visited ((,class (:foreground ,jazz-yellow-2 :underline t :weight normal))))
 
    ;;; basic coloring
-    `(default           ((,class (:foreground ,jazz-fg :background ,jazz-bg))))
+    `(default           ((,class (:foreground ,jazz-fg   :background ,jazz-bg))))
     `(cursor            ((,class (:foreground ,jazz-bg+1 :background ,jazz-magenta))))
+    `(fringe            ((,class (:foreground ,jazz-bg+1 :background ,jazz-bg))))
     `(escape-glyph-face ((,class (:foreground ,jazz-red))))
-    `(fringe            ((,class (:foreground ,jazz-magenta :background ,jazz-bg))))
+
+    `(window-divider    ((,class (:background ,jazz-bg   :foreground ,jazz-bg+1))))
     `(highlight         ((,class (:background ,jazz-bg+))))
-    `(header-line       ((,class (:foreground ,jazz-yellow :background ,jazz-bg-1
-                                   :box (:line-width -1 :color ,jazz-bg :style released-button)))))
-    ;; `(header-line           ((,class (:box (:line-width 1 :color ,jazz-bg+1) :foreground ,jazz-bg+2 :background ,jazz-bg+1))))
+
+    `(header-line       ((,class (:box (:line-width 1 :color ,jazz-magenta) :foreground ,jazz-bg+2 :background ,jazz-bg+))))
+    ;; `(header-line       ((,class (:foreground ,jazz-yellow :background ,jazz-bg-1
+    ;;                                :box (:line-width -1 :color ,jazz-bg :style released-button)))))
 
    ;;; compilation
     `(compilation-column-face ((,class (:foreground ,jazz-yellow))))
