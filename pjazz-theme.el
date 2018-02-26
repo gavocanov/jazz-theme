@@ -111,7 +111,7 @@
     `(window-divider    ((,class (:background ,jazz-bg   :foreground ,jazz-bg+1))))
     `(highlight         ((,class (:background ,jazz-bg+))))
 
-    `(header-line       ((,class (:box (:line-width 1 :color ,jazz-magenta) :foreground ,jazz-bg+2 :background ,jazz-bg+))))
+    `(header-line       ((,class (:box nil :foreground ,jazz-bg+2 :background ,jazz-bg+))))
     ;; `(header-line       ((,class (:foreground ,jazz-yellow :background ,jazz-bg-1
     ;;                                :box (:line-width -1 :color ,jazz-bg :style released-button)))))
 
@@ -142,17 +142,17 @@
 
     ;; faces used by isearch
     `(isearch-fail                ((,class (:foreground ,jazz-fg    :background ,jazz-red-4))))
-    `(isearch                     ((,class (:foreground ,jazz-red-4 :background ,jazz-bg :weight bold :italic t))))
-    `(lazy-highlight              ((,class (:foreground ,jazz-red-4 :background ,jazz-bg :weight bold :italic t))))
-    `(isearch-lazy-highlight-face ((,class (:foreground ,jazz-red-4 :background ,jazz-bg :weight bold :italic t))))
+    `(isearch                     ((,class (:foreground ,jazz-red-4 :background nil :weight normal :italic nil))))
+    `(lazy-highlight              ((,class (:foreground ,jazz-red-4 :background nil :weight normal :italic nil))))
+    `(isearch-lazy-highlight-face ((,class (:foreground ,jazz-red-4 :background nil :weight normal :italic nil))))
 
     ;; ivy
     ;; `(ivy-minibuffer-match-highlight ((,class (:foreground ,jazz-fg+1    :background ,jazz-magenta))))
-    `(ivy-current-match              ((,class (:background ,jazz-bg-1))))
-    `(ivy-minibuffer-match-face-1    ((,class (:foreground ,jazz-red-4  :background ,jazz-bg))))
-    `(ivy-minibuffer-match-face-2    ((,class (:foreground ,jazz-red-4  :background ,jazz-bg))))
-    `(ivy-minibuffer-match-face-3    ((,class (:foreground ,jazz-red-4  :background ,jazz-bg))))
-    `(ivy-minibuffer-match-face-4    ((,class (:foreground ,jazz-red-4  :background ,jazz-bg))))
+    `(ivy-current-match              ((,class (:background ,jazz-bg+1))))
+    `(ivy-minibuffer-match-face-1    ((,class (:foreground ,jazz-red-4  :background nil))))
+    `(ivy-minibuffer-match-face-2    ((,class (:foreground ,jazz-red-4  :background nil))))
+    `(ivy-minibuffer-match-face-3    ((,class (:foreground ,jazz-red-4  :background nil))))
+    `(ivy-minibuffer-match-face-4    ((,class (:foreground ,jazz-red-4  :background nil))))
     `(ivy-posframe                   ((,class (:foreground ,jazz-fg     :background ,jazz-bg+))))
 
     ;; modeline
