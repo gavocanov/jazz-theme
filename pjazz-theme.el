@@ -147,11 +147,13 @@
     `(isearch-lazy-highlight-face ((,class (:foreground ,jazz-red-4 :background ,jazz-bg :weight bold :italic t))))
 
     ;; ivy
-    `(ivy-current-match           ((,class (:foreground ,jazz-fg+1   :background ,jazz-magenta))))
-    `(ivy-minibuffer-match-face-1 ((,class (:foreground ,jazz-magenta :background ,jazz-bg))))
-    `(ivy-minibuffer-match-face-2 ((,class (:foreground ,jazz-magenta :background ,jazz-bg))))
-    `(ivy-minibuffer-match-face-3 ((,class (:foreground ,jazz-magenta :background ,jazz-bg))))
-    `(ivy-minibuffer-match-face-4 ((,class (:foreground ,jazz-magenta :background ,jazz-bg))))
+    ;; `(ivy-minibuffer-match-highlight ((,class (:foreground ,jazz-fg+1    :background ,jazz-magenta))))
+    `(ivy-current-match              ((,class (:background ,jazz-bg-1))))
+    `(ivy-minibuffer-match-face-1    ((,class (:foreground ,jazz-red-4  :background ,jazz-bg))))
+    `(ivy-minibuffer-match-face-2    ((,class (:foreground ,jazz-red-4  :background ,jazz-bg))))
+    `(ivy-minibuffer-match-face-3    ((,class (:foreground ,jazz-red-4  :background ,jazz-bg))))
+    `(ivy-minibuffer-match-face-4    ((,class (:foreground ,jazz-red-4  :background ,jazz-bg))))
+    `(ivy-posframe                   ((,class (:foreground ,jazz-fg     :background ,jazz-bg+))))
 
     ;; modeline
     `(mode-line           ((,class (:box (:line-width 1 :color ,jazz-bg+1) :foreground ,jazz-bg+2 :background ,jazz-bg+1))))
