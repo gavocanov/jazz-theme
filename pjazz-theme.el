@@ -147,7 +147,7 @@
     `(isearch-lazy-highlight-face ((,class (:foreground ,jazz-red-4 :background ,jazz-bg :weight bold :italic t))))
 
     ;; ivy
-    `(ivy-current-match           ((,class (:background ,jazz-bg+1))))
+    `(ivy-current-match           ((,class (:foreground ,jazz-fg+1   :background ,jazz-magenta))))
     `(ivy-minibuffer-match-face-1 ((,class (:foreground ,jazz-magenta :background ,jazz-bg))))
     `(ivy-minibuffer-match-face-2 ((,class (:foreground ,jazz-magenta :background ,jazz-bg))))
     `(ivy-minibuffer-match-face-3 ((,class (:foreground ,jazz-magenta :background ,jazz-bg))))
@@ -483,7 +483,7 @@
     ;; magit
     `(magit-section-title ((,class (:foreground ,jazz-yellow :weight bold :box nil :background ,jazz-bg))))
     `(magit-branch ((,class (:foreground ,jazz-orange :weight bold :box nil :background ,jazz-bg))))
-    `(magit-item-highlight ((t (:background ,jazz-bg+1))))
+    `(magit-section-highlight ((t (:background ,jazz-bg+))))
 
     ;; markdown
     `(markdown-header-face ((,class (:inherit variable-pitch))))
