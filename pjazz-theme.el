@@ -337,9 +337,9 @@
     `(flyspell-incorrect ((,class (:italic t :foreground ,jazz-red+1 :background ,jazz-bg+1))))
 
     ;; flycheck
-    `(flycheck-error ((,class (:italic t :foreground ,jazz-red+1 :background ,jazz-bg+1))))
+    `(flycheck-error ((,class (:foreground ,jazz-red+1))))
     `(flycheck-fringe-error ((,class (:foreground ,jazz-red :background ,jazz-bg))))
-    `(flycheck-warning ((,class (:italic t :foreground ,jazz-green+2 :background ,jazz-bg+1))))
+    `(flycheck-warning ((,class (:italic t))))
     `(flycheck-fringe-warning ((,class (:foreground ,jazz-green+2 :background ,jazz-bg))))
 
     ;; erc
