@@ -156,8 +156,10 @@
     `(ivy-posframe                   ((,class (:foreground ,jazz-fg     :background ,jazz-bg+))))
 
     ;; modeline
-    `(mode-line           ((,class (:weight thin :box (:line-width 1 :color ,jazz-bg+) :foreground ,jazz-bg+2 :background ,jazz-bg+))))
-    `(mode-line-inactive  ((,class (:weight thin :box (:line-width 1 :color ,jazz-bg+) :foreground ,jazz-bg+ :background ,jazz-bg+))))
+    `(mode-line           ((,class (:weight thin :foreground ,jazz-bg+2 :background ,jazz-bg+))))
+    `(mode-line-inactive  ((,class (:weight thin :foreground ,jazz-bg+ :background ,jazz-bg+))))
+    ;; `(mode-line           ((,class (:weight thin :box (:line-width 1 :color ,jazz-bg+) :foreground ,jazz-bg+2 :background ,jazz-bg+))))
+    ;; `(mode-line-inactive  ((,class (:weight thin :box (:line-width 1 :color ,jazz-bg+) :foreground ,jazz-bg+ :background ,jazz-bg+))))
 
     `(mode-line-highlight         ((,class (:inverse-video t))))
     `(mode-line-buffer-id         ((,class (:foreground ,jazz-yellow))))
